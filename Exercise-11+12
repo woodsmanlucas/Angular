@@ -1,0 +1,24 @@
+Exercise 11
+To review some of the terminology, match the following terms with the definitions provided.  Use each term only once.
+template (view), Router, Model, Service, Directive, Decorator
+1. _______Model______________ defines a data reference.
+2. ________router _____________ selects templates (views) and components.
+3. ________Decorator_____________ stores HTML and presents content.
+4. __________Director___________ contains metadata which describes how the component class is processed.
+5. ______service _______________ encapsulates logic which can be used by many components.
+We will talk about these terms another day.
+
+Exercise 12
+Please answer true or false to the following questions:
+    1. ___T__ The package.json file references dependencies that are to be downloaded by the node package manager.
+
+    2. __T___ The package.json file defines command references that can be executed by the node package manager.
+
+    3. __F___ main.ts sets the starting module for the application.
+
+    4. __T___ TypeScript has number and string datatypes among others.
+
+    5. __T___ TypeScript must be transpiled to JavaScript to run in a browser.
+
+    6. __F___ The selector tag defines an element name which can identify the html tag needed to instantiate and render a component.
+
