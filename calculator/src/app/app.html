@@ -1,0 +1,70 @@
+<h1>Calculator</h1>
+
+<section>
+  <form #myForm="ngForm">
+    <p>Adding:</p>
+    <input type="text" name="addingFirst" pattern="[0-9\.]+?" required
+    [(ngModel)]="Operand1" #addingFirst="ngModel"> +
+    <input type="text" name="addingSecond" pattern="[0-9\.]+?" required
+    [(ngModel)]="Operand2" #addingFirst="ngModel">
+    <button type="submit" class="btn btn-default"
+    [disabled]="!myForm.form.valid" (click)="doAddition()">=</button>
+    <span id="additionAns">{{result}}</span>
+    <div [hidden]="addingFirst.valid || addingFirst.pristine">
+        This control is invalid.</div>
+    <p *ngIf="addingFirst?.errors?.required">This field is required.</p>
+    <p *ngIf="addingFirst?.errors?.pattern">
+        Only numbers are allowed.</p>
+  </form>
+</section>
+<section>
+    <form #myForm="ngForm">
+      <p>Subtraction:</p>
+      <input type="text" name="First" pattern="[0-9\.]+?" required
+      [(ngModel)]="Operand1" #First="ngModel"> -
+      <input type="text" name="Second" pattern="[0-9\.]+?" required
+      [(ngModel)]="Operand2" #First="ngModel">
+      <button type="submit" class="btn btn-default"
+      [disabled]="!myForm.form.valid" (click)="doSubtraction()">=</button>
+      <span id="subtractionAns">{{resultsub}}</span>
+      <div [hidden]="First.valid || First.pristine">
+          This control is invalid.</div>
+      <p *ngIf="First?.errors?.required">This field is required.</p>
+      <p *ngIf="First?.errors?.pattern">
+          Only numbers are allowed.</p>
+    </form>
+  </section>
+  <section>
+      <form #myForm="ngForm">
+        <p>Multiplication:</p>
+        <input type="text" name="First" pattern="[0-9\.]+?" required
+        [(ngModel)]="Operand1" #First="ngModel"> x
+        <input type="text" name="Second" pattern="[0-9\.]+?" required
+        [(ngModel)]="Operand2" #First="ngModel">
+        <button type="submit" class="btn btn-default"
+        [disabled]="!myForm.form.valid" (click)="doMultiplication()">=</button>
+        <span id="multiplicationAns">{{product}}</span>
+        <div [hidden]="First.valid || First.pristine">
+            This control is invalid.</div>
+        <p *ngIf="First?.errors?.required">This field is required.</p>
+        <p *ngIf="First?.errors?.pattern">
+            Only numbers are allowed.</p>
+      </form>
+    </section>
+    <section>
+        <form #myForm="ngForm">
+          <p>Division:</p>
+          <input type="text" name="First" pattern="[0-9\.]+?" required
+          [(ngModel)]="Operand1" #First="ngModel"> /
+          <input type="text" name="Second" pattern="[0-9\.]+?" required
+          [(ngModel)]="Operand2" #First="ngModel">
+          <button type="submit" class="btn btn-default"
+          [disabled]="!myForm.form.valid" (click)="doDivision()">=</button>
+          <span id="DivisionAns">{{quotient}}</span>
+          <div [hidden]="First.valid || First.pristine">
+              This control is invalid.</div>
+          <p *ngIf="First?.errors?.required">This field is required.</p>
+          <p *ngIf="First?.errors?.pattern">
+              Only numbers are allowed.</p>
+        </form>
+      </section>
